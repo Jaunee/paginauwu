@@ -1,0 +1,742 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+li{
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(226, 218, 208);
+    font-size: 1rem;
+}
+
+a:hover{
+    color:rgb(245, 14, 14)
+}
+
+header {
+    position: relative;
+    padding: 0 2rem;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content:space-between ;
+}
+
+.navbar .logo a{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .links{
+    display: flex;
+    gap: 2rem;
+    width: 0;
+}
+
+.navbar .toggle-btn{
+    color:rgb(236, 236, 236);
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.action-btn{
+    background-color: rgb(253, 249, 230);
+    color:black;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.action-btn:hover{
+    scale: 1.05;
+    color: rgb(118, 105, 105);
+}
+
+.action-btn:active{
+    scale:0.95;
+}
+
+
+/*Dropdown menu*/
+
+.dropdown-menu{
+    
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top:60px;
+    width: 300px;
+    height: 0;   
+    background: rgb(24, 24, 24);
+    background-size: 300px;
+    backdrop-filter: blur(15px);
+    border-radius:10px ;
+    overflow: hidden;
+    transition: height 0.2s  cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown-menu.open{
+    height: 240px;
+    width: 300px;
+    left: 75%;
+}
+
+
+
+.dropdown-menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-menu .action-btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/*hero */
+section#hero{
+    height: calc(100hv -60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:rgb(58, 102, 102);
+}
+
+#hero h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/*Responsive */
+
+@media (min-width: 992px){
+    .navbar .links,
+    .navbar .action-btn {
+        display: none;
+    }
+
+    .navbar .toggle-btn{
+        display: block;
+    }
+
+    .dropdown-menu{
+        display: block;
+    }
+
+}
+
+@media (min-width: 576px){
+   .dropdown-menu{
+    left:2rem;
+    width: unset;
+   }
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+.contenedor-menu{
+    width:all;
+    background-image: url(negromenuinterno.jpg);
+}
+
+/*Tarjetas de los integrantes/*
+
+* ----------- SLIDER ------------ */
+.swiper{
+    width: 100%;
+  }
+  
+  .swiper-wrapper{
+    width: 100%;
+    height: 35em;
+    display: flex;
+    align-items: center;
+  }
+  
+  .card{
+    width: 20em;
+    height: 90%;
+    background-color: #fff;
+    border-radius: 2em;
+    box-shadow: 0 0 2em rgba(0, 0, 0, .2);
+    padding: 2em 1em;
+  
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  
+    margin: 0 2em;
+  }
+  
+  .swiper-slide:not(.swiper-slide-active){
+    filter: blur(1px);
+  }
+  
+  .card__image{
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    border: 5px solid var(--color);
+    padding: 3px;
+    margin-bottom: 2em;
+  }
+  
+  .card__image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .card__content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .card__title{
+    font-size: 1.5rem;
+    font-weight: 500;
+    position: relative;
+    top: .2em;
+  }
+  
+  .card__name{
+    color: var(--color);
+  }
+  
+  .card__text{
+    text-align: center;
+    font-size: 1.1rem;
+    margin: 1em 0;
+  }
+  
+  .card__btn{
+    background-color: var(--color);
+    color: #fff;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+    padding: .5em;
+    border-radius: .5em;
+    margin-top: .5em;
+    cursor: pointer;
+  }
+
+  /*intro*/
+
+  .intro{
+    position: relative;
+    left: 30%;
+    display: flex;
+    margin-top: 4%;
+    width: 100%;
+    height: 100%;
+  }
+
+  .imagenprincipal {
+    width: 500px;
+    height: 300px;
+    ;
+  }
+
+  /*Logo de BTS*/ 
+  
+
+  .BTS {
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    border-left: 80px solid #110707;
+    margin-left: 100px;
+    margin-top: 150px;
+  }
+
+  .BTS::before{
+    content: "";
+    position: absolute;
+    border-left: 80px solid #110707;
+    border-bottom: 80px solid #110707;
+    transform: skewY(45deg);
+    right: 100%;
+    bottom: 84%;
+    
+  }
+
+  .BTS::after{
+    content: "";
+    position: absolute;
+    border-left: 80px solid #110707;
+    border-bottom: 80px solid #110707;
+    transform: skewY(-25deg);
+    top:88%;
+    right: 100%;
+  }
+
+  .BTS i{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-left: 80px solid #110707;
+    margin-left: 20px;
+    transform: skewY(-45deg);
+    bottom: 80%;
+  }
+
+  .BTS i::before{
+    position: absolute;
+    content: "";
+    border-left: 80px  solid #110707;
+    border-bottom: 250px  solid #110707;
+    transform: skewY(45deg);
+    right: 100%;
+    top:50%
+
+  }
+
+  .BTS i::after{
+    position: absolute;
+    content: "";
+    border-left: 80px solid #110707;
+    border-bottom: 80px solid #110707;
+    transform: skewY(55deg);
+    top: 260%;
+    right: 100%;
+
+  }
+
+  .h1 {
+    font-family: 'Kanit', sans-serif;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 70px;
+    text-align: center;
+  }
+
+  /*cajita inicial animada*/
+  
+  .box {
+    margin-top: 8%;
+    left: 35%;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-color: rgb(211, 211, 211);
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .box::before {
+    content: "";
+    position: absolute;
+    inset: -10px 140px;
+    background: linear-gradient(315deg,#1d1d1d, #515151);
+    transition: 0.5s;
+    animation: animate 4s linear infinite;
+  }
+
+  .box:hover::before {
+    inset: -20px 0px;
+  }
+
+@keyframes animate{
+    0% { 
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.box::after{
+    content: "";
+    position: absolute;
+    inset: 6px;
+    background-color: rgb(226, 226, 226);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.box-content {
+    position: absolute;
+    inset: 30px;
+    border: 6px solid #ffffff;
+    z-index: 3;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box-content img {
+position: absolute;
+top:0;
+left:0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: 0.5s;
+pointer-events: none;
+z-index: 3;
+
+}
+
+.box:hover .box-content img{
+    opacity: 0;
+}
+
+.box-content h2 {
+    position: relative;
+    font-size: 1.5em;
+    text-align: center;
+    color: #000000;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+}
+
+.box-content h2 span {
+    font-weight: 300;
+    font-size:  0.75em;
+}
+
+.box-content a {
+    position: relative;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #fff;
+    color: #110707;
+    border-radius: 25px ;
+    font-weight: 500;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.box-content a:hover {
+    letter-spacing: 0.2em;
+} 
+
+.info {
+
+    width: 100%;
+    height: 300px;;
+    
+}
+
+.iimagen {
+
+    width: 100%;
+    height: 200px;
+   
+}
+
+.uwu {
+    margin-top: 4%;
+    width: 45%;
+    height: 400px;
+    transition: all 0.5s linear;
+}
+
+.uwu:hover{
+    transform: scale(0.9);
+}
+
+.textoinfo {
+    position: absolute;
+    margin-top: -26%;
+    left: 50%; 
+    font-family: 'Kanit', sans-serif;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-family: 'Teko', sans-serif;
+    font-size: 20px;
+    text-align: justify;
+
+}
+
+.mercan{
+    position: relative;
+    margin-top: 20%;
+    width: 100%;
+    height: 200px;
+}
+
+.products{
+    width: 100%;
+    align-self: center;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    font-size: 70%;
+}
+.product{
+    margin-top: 30%;
+    position: relative;
+    background-color: var(--sectionBack);
+    width: 350px;
+    height: 100%;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 20px 40px;
+    border-radius: 10px;
+    transition: .3s;
+}
+.product:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+.image{
+    width:100%;
+    height: 60%;
+    display: grid;
+    place-content: center;
+}
+.image img{
+    width: 240px;
+}
+.namePrice{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.namePrice h3{
+    font-size: 2em;
+    text-transform: capitalize;
+    color: var(--textColor);
+}
+.namePrice span{
+    font-size: 1.5em;
+    color: var(--starColor);
+}
+.product p{
+    font-size: 18px;
+    line-height: 25px;
+}
+.stars svg{
+    font-size: 1.3em;
+    color: var(--starColor);
+}
+.bay{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+.bay button{
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: none;
+    background-color: var(--textColor);
+    color: var(--sectionBack);
+    font-size: 18px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: .5s;
+}
+.bay button:hover{
+    transform: scale(1.1);
+}
+
+/*pagina canciones*/
+
+.player {
+    margin-top: 10%;
+    position: relative;
+    
+}
+
+.player .info {
+    position: absolute;
+    height: 60px;
+    top: 0;
+    opacity: 0;
+    left: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 5px 15px 5px 110px;
+    border-radius: 15px;
+    transition: all 0.5s ease;
+}
+
+.player .info .artist,
+.player .info .name {
+    display: block;
+}
+
+.player .info .artist {
+    color: #dbbdbd;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.player .info .name {
+    color: #999;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.player .info .progress-bar {
+    background-color: #ddd;
+    height: 2px;
+    width: 100%;
+    position: relative;
+}
+
+.player .info .progress-bar .bar {
+    position: relative;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #ade0fe;
+    width: 10%;
+    transition: all 0.2s ease;
+}
+
+.player .info.active {
+    top: -60px;
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+
+.player .control-panel {
+    position: relative;
+    background-color: #f8f5f5;
+    border-radius: 15px;
+    width: 300px;
+    height: 80px;
+    z-index: 5;
+    box-shadow: 0 20px 20px 5px rgb(227, 233, 236);
+}
+
+.player .control-panel .album-art {
+    position: absolute;
+    left: 20px;
+    top: -15px;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    box-shadow: 0 20px 20px 5px rgba(125, 105, 105, 0);
+    transform: scale(1);
+    transition: all 0.5s ease;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.player .control-panel .album-art::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80px;
+}
+
+.player .control-panel.active .album-art {
+    box-shadow: 0px 0px 20px 5px rgba(238, 223, 223, 0.947).2;
+    transform: scale(1.2);
+    transition: all o.5s ease;
+}
+
+.player .control-panel .controls {
+    display: flex;
+    justify-content: flex-end;
+    height: 80px;
+    padding: 0 15px
+}
+
+.player .control-panel .controls .prev,
+.player .control-panel .controls .play,
+.player .control-panel .controls .next {
+    width: 55px;
+    height: auto;
+    border-radius: 10px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    margin: 5px 0;
+    background-color: #ffe4e4;
+    cursor: pointer;
+    transition: background-color 0.3 ease;
+}
+
+.player .control-panel .controls .prev:hover,
+.player .control-panel .controls .play:hover,
+.player .control-panel .controls .next:hover {
+    background-color: #eae1e1;
+    transition: background-color 0.3s ease;
+}
+
+.player .control-panel .controls .prev {
+    background-image: url(back.svg);
+}
+
+.player .control-panel .controls .play {
+    background-image: url(play.svg);
+}
+
+.player .control-panel .controls .next {
+    background-image: url(next.svg);
+}
+
+.player .control-panel.active .controls .play {
+    background-image: url(stop.svg);
+}
+
+.ejemplo{
+
+    margin-top: 10%;
+    position: relative;
+
+}
+
+.ola{
+    position: relative;
+}
+
+.Cancion{
+    margin-top: 6%;
+}
